@@ -9,7 +9,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
 import java.util.List;
 
 @Slf4j
@@ -23,7 +22,7 @@ public class BoardController {
     public ResponseEntity<?> createBoard(
             @Validated @RequestParam("files") List<MultipartFile> files
     ) throws Exception {
-        Board board = boardService.addBoard(Board.builder()
+        boardService.addBoard(Board.builder()
                 .build(), files);
 
         return ResponseEntity.ok().build();

@@ -37,8 +37,8 @@ public class BoardService {
         // 파일에 대해 DB에 저장하고 가지고 있을 것
         else{
             List<Board> pictureBeans = new ArrayList<>();
-            for(Board Board : list) {
-                pictureBeans.add(boardRepository.save(Board));
+            for (Board boards : list) {
+                pictureBeans.add(boardRepository.save(boards));
             }
         }
 

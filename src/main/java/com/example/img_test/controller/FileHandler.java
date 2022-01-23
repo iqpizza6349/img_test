@@ -16,6 +16,7 @@ import java.util.List;
 
 @Component
 public class FileHandler {
+
     public List<Board> parseFileInfo(
             Long boardID,
             List<MultipartFile> multipartFiles
